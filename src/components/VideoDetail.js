@@ -3,7 +3,28 @@ import React from "react";
 import { Paper, Typography } from "@material-ui/core";
 
 export default ({ video }) => {
-  if (!video) return <div>It's empty Folks</div>;
+  if (!video)
+    return (
+      <React.Fragment>
+        <Paper
+          elevation={6}
+          style={{
+            height: "700px",
+            width: "900px",
+            margin: "10px",
+            position: "relative",
+            backgroundColor: "#0049B7",
+            backgroundImage:
+              "url(https://www.wowpatterns.com/assets/files/resource_images/geometric-shapes-pattern.jpg)",
+            // textAlign: "center",
+            // paddingTop: "auto",
+            // padding: "100px",
+            // paddingLeft: "50%",
+          }}
+          square
+        ></Paper>
+      </React.Fragment>
+    );
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
